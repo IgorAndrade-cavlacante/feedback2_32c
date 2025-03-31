@@ -1,4 +1,5 @@
 import iconStar from "./assets/icon-star.svg"
+import illustrationThankYou from "./assets/illustration-Thank-You.svg"
 import { useState } from "react"
 
 
@@ -11,16 +12,14 @@ export function App() {
       setSubmited(true)
     return
     }
- 
-  alert("Please,choose a rate button!")
+    alert("Please,choose a rate button!")
   }
   function handleChangeRateNote(value) {
     setRateNote(value)
   }
 
   return (
-    <div className="h-svh bg-very-dark-blue text-white flex justify-center items-center px-6">
-      {submited === false ? (
+      submited === false ? (
         <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
         
         <div className="bg-dark-blue p-4 w-fit rounded-full mb-4 ">
@@ -42,8 +41,12 @@ export function App() {
         <button className="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking-1" onClick={handleSubmite}>Submit</button>
       </div>
       ) : (
+        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
+        <img src={illustratioThankYou} alt="thank you" />
+
         <p></p>
-      )}
-    </div>
+        </div>
+      )
+   
   )
 }
